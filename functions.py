@@ -131,4 +131,9 @@ def findFactors(num:int) -> list:
       l.append(int(num/i))
   return l
 def checkGWSS(p:int, a:int, b:int) -> boolean: 
+  period = calculatePeriod(p,a,b)
+  if (fib(period+1,a,b)-a) % (p**2) == 0: 
+    return True
+  return False 
+
   
